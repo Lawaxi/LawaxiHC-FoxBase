@@ -17,7 +17,7 @@ public class ConfigManager {
     private File directory;
 
     public ConfigManager() {
-        files = new ArrayList<Config>();
+        files = new ArrayList<>();
         gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create();
         directory = new File(MinecraftClient.getInstance().runDirectory.toString() + "/" + FoxBase.instance.name);
         makeDirectory();

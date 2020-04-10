@@ -1,6 +1,7 @@
 package cn.enaium.foxbase.mixin;
 
 import cn.enaium.foxbase.FoxBase;
+import net.minecraft.SharedConstants;
 import net.minecraft.client.Keyboard;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.InputUtil;
@@ -17,7 +18,7 @@ public class MinecraftClientMixin {
 
     @Inject(at = @At("RETURN"), method = "updateWindowTitle")
 	private void updateWindowTitle(CallbackInfo info) {
-		this.window.setTitle(FoxBase.instance.name + " | Author:" + FoxBase.instance.author + " | Version:" + FoxBase.instance.version + " | Minecraft:" + FoxBase.instance.game);
+		this.window.setTitle(SharedConstants.getGameVersion().getName()+" with "+FoxBase.instance.name+" "+FoxBase.instance.version);
 	}
 
     @Inject(at = @At("HEAD"), method = "run")

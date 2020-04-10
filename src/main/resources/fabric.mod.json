@@ -1,20 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "foxbase",
-  "version": "1.0",
+  "id": "lawaxihc",
+  "version": "1.0.1",
 
-  "name": "Fox Base",
-  "description": "Fox Base!",
+  "name": "LawaxiHC",
+  "description": "基于 Enaium 大佬的 FoxBase编写",
   "authors": [
+    "Lawaxi",
     "Enaium!"
   ],
   "contact": {
-    "homepage": "https://github.com/Enaium/FoxBase",
-    "sources": "https://github.com/Enaium/FoxBase"
+    "homepage": "https://lawaxi.net/",
+    "sources": "https://lawaxi.net/"
   },
 
   "license": "",
-  "icon": "assets/foxbase/icon.png",
+  "icon": "assets/lawaxihc/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -29,7 +30,7 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.15.x"
+    "minecraft": "1.16.x"
   },
   "suggests": {
     "flamingo": "*"

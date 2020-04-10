@@ -1,6 +1,5 @@
 package cn.enaium.foxbase;
 
-import cn.enaium.foxbase.command.CommandManager;
 import cn.enaium.foxbase.config.ConfigManager;
 import cn.enaium.foxbase.event.EventManager;
 import cn.enaium.foxbase.module.ModuleManager;
@@ -10,25 +9,20 @@ public enum FoxBase {
 
     instance;
 
-    public String name = "FoxBase";
-    public String author = "Enaium";
-    public String version = "1.0";
-    public String game = "1.5.2";
+    public String name = "LawaxiHC";
+    public String version = "1.0.1";
 
     public EventManager eventManager;
     public ModuleManager moduleManager;
     public SettingManager settingManager;
-    public CommandManager commandManager;
     public ConfigManager configManager;
 
     public void run() {
         eventManager = new EventManager();
         moduleManager = new ModuleManager();
         settingManager = new SettingManager();
-        commandManager = new CommandManager();
         configManager = new ConfigManager();
         moduleManager.loadMods();
-        commandManager.loadCommands();
         configManager.loadConfig();
     }
 

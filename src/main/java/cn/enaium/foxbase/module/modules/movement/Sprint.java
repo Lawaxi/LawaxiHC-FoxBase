@@ -8,7 +8,7 @@ import org.lwjgl.glfw.GLFW;
 
 public class Sprint extends Module {
     public Sprint() {
-        super("Sprint", GLFW.GLFW_KEY_V, Category.MOVEMENT);
+        super("Sprint","疾跑", GLFW.GLFW_KEY_V, Category.MOVEMENT);
     }
 
     @EventTarget

@@ -8,16 +8,16 @@ import net.minecraft.client.network.ClientPlayerEntity;
 public class Module {
     private boolean toggle;
     private String name;
+    private String mingzi;
     private int keyCode;
     private Category category;
 
-    private String displayText;
-
     protected MinecraftClient mc = MinecraftClient.getInstance();
 
-    public Module(String name, int keyCode, Category category) {
+    public Module(String name, String mingzi,int keyCode, Category category) {
         this.toggle = false;
         this.name = name;
+        this.mingzi=mingzi;
         this.keyCode = keyCode;
         this.category = category;
     }
@@ -38,6 +38,10 @@ public class Module {
         return name;
     }
 
+    public String getMingzi(){
+        return mingzi;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -56,18 +60,6 @@ public class Module {
 
     public void setCategory(Category category) {
         this.category = category;
-    }
-
-    public String getDisplayName() {
-        if (displayText == null) {
-            return name;
-        } else {
-            return name  + " : " + displayText;
-        }
-    }
-
-    protected void setDisplayText(String displayText) {
-        this.displayText = displayText;
     }
 
     public void toggle()
