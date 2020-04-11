@@ -14,8 +14,7 @@ public class GameRendererMixin {
             at = {@At(value = "FIELD",
                     target = "Lnet/minecraft/client/render/GameRenderer;renderHand:Z",
                     ordinal = 0)},
-            method = {
-                    "renderWorld(FJLnet/minecraft/client/util/math/MatrixStack;)V"})
+            method = "renderWorld(FJLnet/minecraft/client/util/math/MatrixStack;)V")
     private void onRenderWorld(float partialTicks, long finishTimeNano,
                                MatrixStack matrixStack, CallbackInfo ci)
     {

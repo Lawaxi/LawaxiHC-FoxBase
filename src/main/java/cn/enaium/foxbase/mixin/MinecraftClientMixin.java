@@ -6,7 +6,9 @@ import net.minecraft.client.Keyboard;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.client.util.Window;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -14,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(MinecraftClient.class)
 public class MinecraftClientMixin {
 
-    private Window window;
+    @Shadow @Final private Window window;
 
     @Inject(at = @At("RETURN"), method = "updateWindowTitle")
 	private void updateWindowTitle(CallbackInfo info) {
@@ -30,6 +32,5 @@ public class MinecraftClientMixin {
     private void stop(CallbackInfo info) {
         FoxBase.instance.stop();
     }
-
 
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "lawaxihc",
-  "version": "1.0.1",
+  "version": "1.0.2",
 
   "name": "LawaxiHC",
   "description": "基于 Enaium 大佬的 FoxBase编写",
@@ -28,7 +28,7 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.7.4",
+    "fabricloader": ">=0.7.9",
     "fabric": "*",
     "minecraft": "1.16.x"
   },
@@ -36,3 +36,4 @@
     "flamingo": "*"
   }
 }
+

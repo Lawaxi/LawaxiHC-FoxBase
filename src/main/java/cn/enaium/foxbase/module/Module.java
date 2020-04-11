@@ -72,11 +72,15 @@ public class Module {
         }
     }
 
+    public boolean enable=false;
+
     public void onEnable() {
         FoxBase.instance.eventManager.register(this);
+        enable=true;
     }
 
     public void onDisable() {
         FoxBase.instance.eventManager.unregister(this);
+        enable=false;
     }
 }

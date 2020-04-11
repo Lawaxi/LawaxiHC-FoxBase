@@ -16,9 +16,9 @@ public class BoatFly extends Module {
     @EventTarget
     public void onUpdate(EventUpdate e){
 
-        if(mc.player.isRiding())
+        Entity boat = mc.player.getVehicle();
+        if(mc.player.getVehicle()!=null)
         {
-            Entity boat = mc.player.getVehicle();
             if(mc.options.keyJump.isPressed())
             {
                 boat.setVelocity(boat.getVelocity().x,0.3,boat.getVelocity().z);

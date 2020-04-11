@@ -3,9 +3,7 @@ package cn.enaium.foxbase.module;
 import cn.enaium.foxbase.FoxBase;
 import cn.enaium.foxbase.event.EventTarget;
 import cn.enaium.foxbase.event.events.EventKeyboard;
-import cn.enaium.foxbase.module.modules.movement.BoatFly;
-import cn.enaium.foxbase.module.modules.movement.Flight;
-import cn.enaium.foxbase.module.modules.movement.Sprint;
+import cn.enaium.foxbase.module.modules.movement.*;
 import cn.enaium.foxbase.module.modules.render.FullBright;
 import cn.enaium.foxbase.module.modules.render.HUD;
 import net.minecraft.client.MinecraftClient;
@@ -28,6 +26,8 @@ public class ModuleManager {
         this.addModule(new FullBright());
         this.addModule(new Flight());
         this.addModule(new BoatFly());
+        this.addModule(new NoFall());
+        this.addModule(new HighJump());
     }
 
 
